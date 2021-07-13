@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Contact Service</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="contactClient.css">
+</head>
+
+<body class="content">
+<script src="contactClient.js"></script>
+    <!-- Setting up all the divs to be manipulated by JQuery -->
+    <div class="header bg-info row pt-2 pb-2 text-right container-fluid">
+        <h1 onclick="location.reload()" class="text-dark col" style="text-shadow: 1px 1px whitesmoke; cursor: pointer;">The Contacts
+            Service</h1>
+        <form class="row col justify-content-end">
+            <h6><input id="searchText" type="text" class="form-control search_input col mt-2"></h6>
+            <select id="searchOptions" class="form-control col-3 ml-1 mt-2">
+                <option col_name="name">Name</option>
+                <option col_name="townCity">City</option>
+                <option col_name="phoneNumber">Phone</option>
+            </select>
+            <a id="searchButton" href="#" class="fa fa-search col-1 mt-2 btn text-right btn_search"></a>
+        </form>
+    </div>
+    <div>
+        <h5 id="error" class="alert  alert-danger global_alert" role="alert">
+        </h5>
+        <h5 id="info" class="alert alert-info global_alert" role="alert">
+        </h5>
+        <h5 id="success" class="alert alert-success global_alert" role="alert">
+        </h5>
+        <h5 id="warning" class="alert alert-warning global_alert" role="alert">
+        </h5>
+    </div>
+
+    <div class="container-fluid">
+        <div id="contact_cards" class="row justify-content-center mb-5"></div>
+        <div class="container-fluid m-5" style="text-align: center;">
+            <!-- This is the modal for adding a contact-->
+            <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addContactModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add Contact</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-11 m-3">
+                                <form>
+                                    <img src="profile_icon.png" alt="Avatar" style="width:100%">
+                                    <div class="container mt-2 mb-3">
+                                        <h6><input type="text" class="form-control add_input" col_name="firstName"
+                                                placeholder="First Name"></h6>
+                                        <h6><input type="text" class="form-control add_input" col_name="lastName"
+                                                placeholder="Last Name"></h6>
+                                        <h6><input type="number" class="form-control add_input" col_name="phoneNumber"
+                                                placeholder="Phone Number"></h6>
+                                        <h6><input type="text" class="form-control add_input" col_name="street"
+                                                placeholder="Street"></h6>
+                                        <h6><input type="text" class="form-control add_input" col_name="townCity"
+                                                placeholder="City"></h6>
+                                        <h6><input type="text" class="form-control add_input" col_name="postcode"
+                                                placeholder="Postcode"></h6>
+                                        <div class="mt-4">
+                                            <button class="btn btn-dark btn_add">Save</button>
+                                            <button class="btn btn-dark btn_clear">Clear</button>
+                                            <button id="add_close" class="btn btn-dark btn_close"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                        <h6 id="add_error" class="alert alert-danger mt-3" role="alert"></h6>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer for all the button -->
+    <div class="footer bg-info p-2">
+        <a class="btn controller btn_import btn-dark btn-lg fa fa-database" size="bg" href="#"> Import</a>
+        <a class="btn controller btn_viewAll btn-dark btn-lg fa fa-id-badge" size="bg" href="#"> View All</a>
+        <a class="btn controller btn_addNew btn-dark btn-lg fa fa-user" data-toggle="modal" size="bg"
+            data-target="#addModal">
+            Add</a>
+        <a class="btn controller btn_deleteAll btn-dark btn-lg fa fa-trash"> Empty</a>
+    </div>
+    </div>
+</body>
+
+</html>

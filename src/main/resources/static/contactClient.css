@@ -1,0 +1,68 @@
+.container {
+        padding: 2px 16px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    }
+
+    /* The main body of the application exclusing header and footer*/
+    .content {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    /* For the icon links*/
+    .fa {
+        font-size: 25px;
+    }
+
+    /* For the contact cards */
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+        transition: 0.2s;
+        width: 100%;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 200px 0 rgba(0, 0, 0, 0.75);
+    }
+
+    /* All the alert banners*/
+    .global_alert {
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .modal-body {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+        width: 100%;
+    }
+
+    .modal-body:hover {
+        box-shadow: 0 8px 200px 0 rgba(0, 0, 0, 0.20);
+    }
+
+    .btn_search {
+        color: #f8f9fa;
+        transition: 0.2s;
+    }
+
+    .btn_search:hover {
+        color: #343a40;
+    }
+
+    .footer {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
